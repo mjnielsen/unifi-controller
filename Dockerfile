@@ -1,7 +1,6 @@
 FROM debian:buster-20201012-slim
 
 COPY libssl.sh /tmp/
-# COPY unifi_sysvinit_all.deb /tmp/
 
 RUN apt-get update && apt-get install wget ca-certificates apt-transport-https gnupg -y
 RUN chmod +x /tmp/libssl.sh && /tmp/libssl.sh
