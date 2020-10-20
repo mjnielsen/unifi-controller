@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  unifi:
+    image: mjnielsen/unifi
+    container_name: unifi
+    restart: unless-stopped
+
+    volumes:
+        - ./db:/usr/lib/unifi/data/db
+        - ./backups:/usr/lib/unifi/data/backup/
+        - ./system.properties/:/usr/lib/unifi/data/system.properties
+
+    ports:
+      - "127.0.0.1:8443:8443" # Port used for controller GUI/API as seen in a web browser
+      - "3478/udp" # Port used for STUN
+      - "5514/udp" # Port used for remote syslog capture
+      - "8080/tcp" # Port used for device and controller communication
+      - "8880/tcp" # Port used for HTTP portal redirection
+      - "8843/tcp" # Port used for HTTPS portal redirection
+      - "6789/tcp" # Port used for UniFi mobile speed test
+      - "27117/tcp" # Port used for local-bound database communication
+      - "5656-5699/tcp" # Ports used by AP-EDU broadcasting
+      - "10001/udp" # Port used for device discovery
+      - "1900/udp" # Port used for "Make controller discoverable on L2 network" in controller settings
+        
