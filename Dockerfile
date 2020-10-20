@@ -8,7 +8,7 @@ RUN chmod +x /tmp/libssl.sh && /tmp/libssl.sh
 
 # Install MongoDB 3.6
 RUN wget -qO - https://www.mongodb.org/static/pgp/server-3.6.asc | apt-key add - 
-RUN echo 'deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 main' >> /etc/apt/sources.list 
+RUN echo 'deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse' >> /etc/apt/sources.list 
 RUN apt-get update && apt-get install mongodb-org-server -y
 
 # Install openjdk-8
