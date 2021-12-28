@@ -1,4 +1,4 @@
-# Unifi Controller
+# Unifi Network Application
 
 Unifi Network Application (previously "Unifi Controller") Docker image.
 
