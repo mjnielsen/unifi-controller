@@ -19,7 +19,7 @@ RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | a
 
 # Install Unifi Controller
 RUN apt-get update && apt-get install logrotate binutils libcap2 curl jsvc -y \
-    && wget https://dl.ui.com/unifi/6.0.28/unifi_sysvinit_all.deb && dpkg -i unifi_sysvinit_all.deb \
+    && wget https://dl.ui.com/unifi/6.5.55/unifi_sysvinit_all.deb && dpkg -i unifi_sysvinit_all.deb \
     && mkdir -p /usr/lib/unifi/data && touch /usr/lib/unifi/data/system.properties \
     && rm unifi_sysvinit_all.deb
 
