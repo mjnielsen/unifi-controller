@@ -1,6 +1,8 @@
 # Unifi Controller
 
-[Unifi Controller](https://www.ui.com/software/) in a container. The list of ports that need to be exposed can be found [here](https://help.ui.com/hc/en-us/articles/218506997-UniFi-Ports-Used). Alternatively, you could run in host network mode if you don't have any issues with port clashes.
+Unifi Network Application (previously "Unifi Controller") Docker image.
+
+The list of ports that need to be exposed can be found [here](https://help.ui.com/hc/en-us/articles/218506997-UniFi-Ports-Used). Alternatively, you could run in host network mode if you don't have any issues with port clashes.
 
 If not running in host network mode, you need to inform the controller software of the IP address that Unifi devices can use to communicate with the controller. This can be found in Settings > Controller > Controller Hostname/IP.
 
